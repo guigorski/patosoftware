@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+    <head>
+
+        <title>Foi mal tava doidão Blog</title>
+          <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+      <div class="page-header">
+      <h1><a href="/">Associação Academica Atletica UTFPR - Pato Branco </a></h1>
+      <i><img src="https://lh6.googleusercontent.com/-pGJicVVTUho/AAAAAAAAAAI/AAAAAAAAAAA/f4TiIwFYFIQ/photo.jpg" vspace="20px" hspace=center border="10px" align="right"/>
+  </i></div>
+
+#	{% if users %}
+#<ul class="user-list">
+ #   {% for user in users %}
+ #   <li>{{ user }}</li>
+   # {% endfor %}
+#</ul>
+#{% endif %}
+
+        {% for post in posts %}
+            <div>
+              <div class="post">
+  <p>published: {{ post.published_date }}</p>
+  <h1><a href="">{{ post.title }}</a></h1>
+  <p>{{ post.text|linebreaksbr }}</p>
+</div>
+            </div>
+        {% endfor %}
+    </body>
+</html>
