@@ -10,7 +10,7 @@ class Associado(models.Model):
       x = random.randint(1, 200000)
       return x
 
-    id = models.CharField(max_length=1,primary_key=True, default=randomzin, editable=True)
+    id = models.CharField(max_length=6,primary_key=True, default=randomzin, editable=True)
     Nome = models.CharField(max_length=200)
     RG = models.CharField(max_length=12)
     CPF = models.CharField(max_length=12)
