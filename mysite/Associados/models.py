@@ -7,7 +7,7 @@ import random
 class Associado(models.Model):
 
     def randomzin():
-      x = random.randint(0001, 200000)
+      x = random.randint(1, 200000)
       return x
 
     id = models.CharField(max_length=1,primary_key=True, default=randomzin, editable=True)
