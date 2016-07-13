@@ -2,17 +2,23 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 import uuid
+import random
 
+class Associado(models.Model):
 
-class Associados(models.Model):
- 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    def randomzin():
+      x = random.randint(0001, 200000)
+      return x
+
+    id = models.CharField(max_length=1,primary_key=True, default=randomzin, editable=True)
     Nome = models.CharField(max_length=200)
     RG = models.CharField(max_length=12)
     CPF = models.CharField(max_length=12)
     RA = models.CharField(max_length=20, null=True, blank=True)
     Data_de_Associacao = models.DateField(
             default=timezone.now)
+
+
 
     def publish(self):
         self.save()
