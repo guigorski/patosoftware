@@ -11,7 +11,7 @@ class Associados(models.Model):
       return x
 
     id = models.CharField(max_length=6,primary_key=True, default=randomzin, editable=True)
-    Nome = models.CharField(max_length=200)
+    Nome = models.CharField(max_length=200, unique = True)
     RG = models.CharField(max_length=12)
     CPF = models.CharField(max_length=12)
     RA = models.CharField(max_length=20, null=True, blank=True)
