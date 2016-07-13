@@ -4,7 +4,7 @@ from django.utils import timezone
 import uuid
 import random
 
-class Associado(models.Model):
+class Associados(models.Model):
 
     def randomzin():
       x = random.randint(1, 200000)
